@@ -34,7 +34,7 @@ buf mod init
 > `.proto` 파일 경로가 확인되는 방식이므로 항상 `.proto` 파일 계층 `root`의 루트에 `buf.yaml` 파일을 두는 것이 좋습니다.
 
 
-## (2) init buf.gen.yaml
+### (2) init buf.gen.yaml
 `buf.gen.yaml`은 buf generate 명령이 선택한 언어에 대한 통합 코드를 생성하는 데 사용하는 구성 파일입니다.  </br># [공식문서 바로가기](https://buf.build/docs/configuration/v1/buf-gen-yaml)
 
 ````
@@ -55,7 +55,7 @@ plugins:
 > buf.gen.yaml
 ````
 
-## (3) Generate code
+### (3) Generate code
 `buf.gen.yaml`에 작성된 내용에 따라 Protocol Buffers를 Compile합니다.
 ````
 buf generate proto
@@ -70,7 +70,7 @@ buf generate는 기본적으로 현재 위치의 `buf.gen.yaml`를 추적합니�
 buf generate --template ./proto/buf.gen.go.yaml 
 ```
 
-## (3) Lint API
+### (3) Lint API
 `buf lint`를 실행하면 buf는 `buf.yaml`의  `lint:use: -DEFAULT` 에 설정된 옵션에 따라 모든 Protobuf 파일에 대해 일련의 **lint rules**을 검사합니다.
 
 linit rules란? : 프로젝트에서 정의한 디렉토리 구조(ex. pet/v1/pet.proto) 또는 Prifix/Suffix 관례 등의 규칙을 의미합니다.
