@@ -100,7 +100,7 @@ grpcurl --plaintext localhost:50051 list
 `grpcurl` 또는 `buf curl` CLI를 사용하여 gRPC를 호출합니다.
 ```` shell
 # grpcurl version
-grpcurl --plaintext -d '{"name":"HI buf"}' localhost:50051 greet.v1.GreeterService/SayHello
+grpcurl --plaintext -d '{"name":"HI buf","age":30}' localhost:50051 greet.v1.GreeterService/SayHello
 
 # buf version
 buf curl \
